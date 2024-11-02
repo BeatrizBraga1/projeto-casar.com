@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@layer base {
+  h1 {
+    @apply text-[21px] font-semibold;
+  }
+  h2 {
+    @apply text-[18px] font-semibold;
+  }
+  h3 {
+    @apply text-[16px] font-medium;
+  }
+  h4 {
+    @apply text-[16px] font-semibold;
+  }
+  h5 {
+    @apply text-[16px] font-medium;
+  }
+  p {
+    @apply text-[14px] font-normal;
+  }
+}
+
+/* CORES PADRÕES */
+
+.p-color-lg{
+  color: #D4EDEE;
+}
+
+.p-color{
+  color: #32C0C8;
+}
+
+.p-color-dk{
+  color: #329599;
+}
+
+.placeholder{
+  color: #BCBCBC;
+}
+
+.grey{
+  color: #616161;
+}
+
+.grey-dk{
+  color: #4E4E4E;
+}
+
+.bg-white-lg{
+  color: #FFFFFF;
+}
+
+.bg-white{
+  color: #F3F3F5;
+}
+
+.border-line{
+  color: #E9ECEF;
+}
+
+.success-check{
+  color: #5CBB5C;
+}
+
+.warning{
+  color: #FFB22B;
+}
+
+.danger{
+  color: #FC4B6C;
+}
+
