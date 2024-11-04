@@ -1,18 +1,26 @@
 import React from 'react'
+import NotFound from './NotFound';
 import IndividualRepository from '../components/IndividualRepository';
-import userImg from '../assets/images/bia-braga.jpg';
+import { useLocation } from 'react-router-dom';
 
-const user = () => {
+const User: React.FC = () => {
+  const location = useLocation();
+  const { usuario } = location.state || {};
+
+  if (!usuario) {
+    return <NotFound />;
+  }
+
   return (
     <>
         <div className="flex justify-between">
             <div className="w-[40%] p-[20px] m-[20px] text-center border border-gray-300 rounded flex-1 h-[100%]">
-                <img src={userImg} alt="User" className="w-[200px] h-[200px] mx-auto rounded-full"/>
+                <img src={usuario.foto} alt="User" className="w-[200px] h-[200px] mx-auto rounded-full"/>
                 <div className="pt-[20px] pb-[20px]">
-                    <h1>Beatriz Braga</h1>
-                    <p>@bia_bragaa</p>
+                    <h1>{usuario.nome}</h1>
+                    <p>{usuario.usuario}</p>
                 </div>
-                <p>Trabalha com segurança cibernética, experiencia em empresas multinacionais.</p>
+                <p>{usuario.descricao_usuario}</p>
             </div>
             <div className="w-[60%] m-[20px]">
                 <h1 className="text-p-color">Repositórios</h1>
@@ -25,4 +33,4 @@ const user = () => {
   )
 }
 
-export default user
+export default User
