@@ -69,23 +69,31 @@ const IndividualRepository: React.FC<RepositoryProps> = ({ repositorio, onToggle
   if (!repositorio) return null;
 
   return (
-    <div className="flex justify-between border border-gray-300 p-[10px] mt-[15px] mb-[15px] rounded min-h-[130px]">
-      <div className="w-[70%] items-center justify-center">
-        <h2>{repositorio.titulo}</h2>
-        <p>{repositorio.descricao_repositorio}</p>
-        <div className="flex pt-[10px] pb-[10px] items-center">
-          <FaCircle style={{ color: obterCorLinguagem(repositorio.linguagem) }} />
-          <p className="text-[12px] pl-[5px]">{repositorio.linguagem}</p>
-          <p className="text-[12px] pl-[25px]">Updated on {formatarData(repositorio.data_cadastro)}</p>
+    <div className="flex-row justify-between border border-gray-300 p-[15px] sm:p-[10px] mt-[15px] mb-[15px] rounded min-h-[130px]">
+      <div className="items-center justify-center">
+        <div className="flex justify-between pb-[10px]">
+          <div className="content-center">
+            <h2>{repositorio.titulo}</h2>
+          </div>
+          <div>
+            <div onClick={toggleFavorito} className="cursor-pointer">
+            {favorito ? (
+              <FaHeart className="text-[40px] text-p-color border border-p-color rounded-full pt-[11px] pb-[11px] pl-[8px] pr-[8px] inline-flex" />
+            ) : (
+              <FaRegHeart className="text-[40px] placeholder bg-bg-white rounded-full pt-[11px] pb-[11px] pl-[8px] pr-[8px] inline-flex" />
+            )}
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex w-[30%] justify-end">
-        <div onClick={toggleFavorito} className="cursor-pointer">
-          {favorito ? (
-            <FaHeart className="text-[40px] text-p-color border border-p-color rounded-full pt-[11px] pb-[11px] pl-[8px] pr-[8px] inline-flex" />
-          ) : (
-            <FaRegHeart className="text-[40px] placeholder bg-bg-white rounded-full pt-[11px] pb-[11px] pl-[8px] pr-[8px] inline-flex" />
-          )}
+        <p>{repositorio.descricao_repositorio}</p>
+        <div className="sm:flex pt-[10px] pb-[10px] items-center">
+          <div className="flex">
+            <FaCircle style={{ color: obterCorLinguagem(repositorio.linguagem) }} />
+            <p className="text-[12px] pl-[5px]">{repositorio.linguagem}</p>
+          </div>
+          <div>
+            <p className="text-[12px] pl-0 sm:pl-[25px] pt-[8px] sm:pt-0">Updated on {formatarData(repositorio.data_cadastro)}</p>
+          </div>
         </div>
       </div>
     </div>
