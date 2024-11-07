@@ -6,7 +6,7 @@
 - Felipe Pereira
 - Lucy Silva
 - Livia Gomes
-<h3>Quaisquer outros nomes não cadastrados você será emcaminhado para página de Not Found.</h3>
+<h3>Quaisquer outros nomes não cadastrados você será encaminhado para página de Not Found.</h3>
 
 <h3>Além disso, você também conseguirá salvar os repositórios que mais gostou e eles ficarão salvos no seu Local Storage do Chrome.</h3>
 
