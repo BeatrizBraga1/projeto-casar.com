@@ -19,4 +19,14 @@
   - Agora na pasta frontend mesmo dê um "npm start"; <br />
   - O projeto estará rodando no http://localhost:3000/
 
+<a href="https://www.loom.com/share/0375fc98c258405ebd8ef8a030c48498?sid=7164c7f1-e273-4b64-a170-2cdf64294294">
+  Clique aqui para ver o vídeo de como funciona!
+</a>
+
+![pesquisarusuario](https://github.com/user-attachments/assets/2decd3c2-e84d-4d16-b60a-a5bb836a9542)
+![usuario](https://github.com/user-attachments/assets/07dc068d-2b26-4579-b49b-1b234886cf2d)
+![favoritos](https://github.com/user-attachments/assets/321a014e-bbc1-4713-9226-37b1cca5a5bd)
+![nao encontrado](https://github.com/user-attachments/assets/46384c0e-a3fe-445d-b06d-0272a5e10da5)
+
+
 
